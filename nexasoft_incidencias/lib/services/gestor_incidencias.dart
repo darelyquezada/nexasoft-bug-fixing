@@ -40,6 +40,11 @@ class GestorIncidencias {
         break;
       }
     }
+    if (estado == 'Pendiente') {
+      cantidadPendientes++;
+    } else {
+      cantidadPendientes--;
+    }
     await datos.guardar(incidencias);
   }
 
